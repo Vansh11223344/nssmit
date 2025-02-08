@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="nsslogo.png">
+  <title>About Us</title>
+  <style>
+    /* General Styles */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #003366; /* Navy Blue */
+      color: #ffffff; /* White text */
+    }
+
+    /* Header Styles */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background-color: #002244; /* Darker Navy Blue */
+      border-bottom: 2px solid #ffffff;
+    }
+
+    .logo {
+      height: 60px;
+    }
+
+    .nav-links a {
+      color: #ffffff;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 16px;
+    }
+
+    .nav-links a:hover {
+      text-decoration: underline;
+      color: #ffeb3b;
+    }
+
+    /* Main Content Styles */
+    .main-content {
+      padding: 20px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .main-content h1 {
+      text-align: center;
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+
+    .main-content p {
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    /* Footer Styles */
+    footer {
+      text-align: center;
+      padding: 10px;
+      background-color: #002244;
+      border-top: 2px solid #ffffff;
+      margin-top: 20px;
+    }
+
+    footer p {
+      margin: 0;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header Section -->
+  <header>
+    <!-- NSS Logo -->
+    <img src="nsslogo.png" alt="NSS Logo" class="logo">
+    
+    <!-- Navigation Links -->
+    <nav class="nav-links">
+      <a href="#" id="backToMain">Home</a>
+      <a href="#about">About Us</a>
+      <a href="#" id="gallery">Gallery</a>
+      <a href="#activities">Events</a>
+      
+    </nav>
+  </header>
+  
+  <script>
+    document.getElementById("backToMain").addEventListener("click", function(event) {
+      event.preventDefault(); // Prevent default link behavior
+      window.location.href = "index.html"; // Redirect to main page
+    });
+    
+    document.getElementById("gallery").addEventListener("click", function(event) {
+      event.preventDefault(); // Prevent default link behavior
+      window.location.href = "GalleryNss.html"; // Redirect to main page
+    });
+  </script>
+  
+
+  <!-- Main Content Section -->
+  <div class="main-content">
+    <h1>National Service Scheme (NSS)</h1>
+    <p>
+      The National Service Scheme (NSS) is a Central Sector Scheme of the Government of India, Ministry of Youth Affairs & Sports. It provides opportunities to students to participate in various government-led community service activities and programs. The aim of NSS is to develop the personality and character of students through community service.
+    </p>
+    <p>
+      NSS volunteers work in rural areas, adopted villages, and urban slums to help improve living conditions and promote sustainable development. The motto of NSS is <strong>"Not Me, But You"</strong>, which reflects the essence of democratic living and the need for selfless service.
+    </p>
+    <h2 id="about">About NSS</h2>
+    <p>
+      The National Service Scheme was launched in 1969 to involve students in nation-building activities. It aims to inculcate social welfare in students and provide service to society without bias. NSS volunteers work on issues like literacy, health, environment, and social justice.
+    </p>
+    <h2 id="activities">Activities</h2>
+    <p>
+      NSS organizes various activities such as blood donation camps, tree plantation drives, cleanliness campaigns, and awareness programs on health, hygiene, and education. Volunteers also participate in relief work during natural disasters and emergencies.
+    </p>
+    <h2 id="contact">Contact Us</h2>
+    <p>
+      For more information about NSS, you can contact on our any social media platform or your nearest NSS unit or visit the official website of the Ministry of Youth Affairs & Sports.
+    </p>
+  </div>
+
+  <!-- Footer Section -->
+  <footer>
+    <p>&copy; 2025 National Service Scheme. All rights reserved.</p>
+  </footer>
+
+  <!-- JavaScript for Interactive Features -->
+  <script>
+    // Example: Add interactivity to the page
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const targetId = link.getAttribute('href').substring(1);
+        const targetSection = document.getElementById(targetId);
+        if (targetSection) {
+          targetSection.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
+  </script>
+</body>
+</html>

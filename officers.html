@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="nsslogo.png">
+  <title>NSS Program Officers</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #16072b, #1a2a54, #16072b);
+      color: white;
+    }
+
+    /* Header styling */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background-color: #002244;
+    }
+
+    header img {
+      height: 50px;
+    }
+
+    header nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+      font-size: 16px;
+    }
+
+    header nav a:hover {
+      color: #ffeb3b;
+      text-decoration: underline;
+    }
+
+    /* Main content styling */
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .profile {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .profile img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      border: 5px solid white;
+      margin-bottom: 10px;
+    }
+
+    .profile h2 {
+      margin: 5px 0;
+      font-size: 24px;
+    }
+
+    .profile p {
+      margin: 5px 0;
+      font-size: 16px;
+      text-align: center;
+    }
+
+    .email-link {
+  color: rgb(0, 128, 255); /* Default color */
+  text-decoration: none; /* Optional: remove underline */
+}
+
+.email-link:hover {
+  color: orange; /* Color on hover */
+}
+
+    /* Footer styling */
+    footer {
+      text-align: center;
+      padding: 10px;
+      background-color: #002244;
+      color: white;
+      position:static;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header Section -->
+  <header>
+    <img src="nsslogo.png" alt="NSS Logo">
+    <nav>
+      <a href="index.html" id="home-link">Home</a>
+      <a href="AboutNss.html" id="about-link">About Us</a>
+      <a href="AboutNss.html" id="Gallery-link">Gallery</a>
+      <a href="eventNss.html" id="events-link">Events</a>
+     
+    </nav>
+  </header>
+  <script>
+    // Event listener to handle 'Home' link click
+    document.getElementById('home-link').addEventListener('click', function(event) {
+      event.preventDefault(); // Prevents the default anchor link behavior
+      window.location.href = 'index.html'; // Redirects to index.html
+    });
+  
+    // Event listener to handle 'About' link click
+    document.getElementById('about-link').addEventListener('click', function(event) {
+      event.preventDefault(); // Prevents the default anchor link behavior
+      window.location.href = 'AboutNss.html'; // Redirects to AboutNss.html
+    });
+
+    document.getElementById('Gallery-link').addEventListener('click', function(event) {
+      event.preventDefault(); // Prevents the default anchor link behavior
+      window.location.href = 'GalleryNss.html'; // Redirects to AboutNss.html
+    });
+
+    document.getElementById('events-link').addEventListener('click', function(event) {
+      event.preventDefault(); // Prevents the default anchor link behavior
+      window.location.href = 'eventNss.html'; // Redirects to AboutNss.html
+    });
+  </script>
+
+  <!-- Main Content Section -->
+  <div class="container">
+    <div class="profile">
+      <img src="MadodiSir.png" alt="Officer 1">
+      <h2>Balakrishna S Maddodi</h2>
+      <p>Designation: Program Coordinator</p>
+      <p>Email:<a href="mailto:bs.maddodi@manipal.edu" class="email-link">bs.maddodi@manipal.edu</a></p>
+    </div>
+    <div class="profile">
+      <img src="PoornimaMam.png" alt="Officer 2">
+      <h2>Poornima Bhagavath</h2>
+      <p>Designation: Program Coordinator</p>
+      <p>Email:<a href="mailto:poornima.nayak@manipal.edu" class="email-link">poornima.nayak@manipal.edu</a></p>
+    </div>
+    <div class="profile">
+      <img src="LaxmanSir.png" alt="Officer 3">
+      <h2>Lakshman Rao S. Paragond</h2>
+      <p>Designation: Assistant Coordinator</p>
+      <p>Email:<a href="mailto:laxman.sp@manipal.edu" class="email-link">laxman.sp@manipal.edu</a></p>
+    </div>
+    <div class="profile">
+      <img src="MahaShwetaMam.png" alt="Officer 4">
+      <h2>Mahasweta Laskar</h2>
+      <p>Designation: Assistant Coordinator</p>
+      <p>Email:<a href="mailto:mahasweta.laskar@manipal.edu" class="email-link">mahasweta.laskar@manipal.edu</a></p>
+    </div>
+    <div class="profile">
+      <img src="HarshiniMam.png" alt="Officer 5">
+      <h2>Harshini Dasari</h2>
+      <p>Designation: Assistant Coordinator</p>
+      <p>Email:<a href="mailto:harshini.dasari@manipal.edu" class="email-link">harshini.dasari@manipal.edu</a></p>
+    </div>
+  </div>
+
+  <!-- Footer Section -->
+  <footer>
+    <p>&copy; 2025 NSS. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // JavaScript for any additional functionality
+    // Example: Highlight the current link
+    const currentPage = window.location.href;
+    const links = document.querySelectorAll('header nav a');
+    links.forEach(link => {
+      if (link.href === currentPage) {
+        link.style.fontWeight = 'bold';
+      }
+    });
+  </script>
+</body>
+</html>

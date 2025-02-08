@@ -1,0 +1,450 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #005582, #5a0d4e);
+     /*background-attachment: fixed; Keeps the background stable on scroll */
+    color: #333;
+}
+
+header {
+    display: flex;
+    justify-content:center;
+    justify-content:space-between;
+    padding: 20px;
+    background-color: #002244;
+    color: white;
+    top: 0;
+    z-index: 1000;
+    font-size:20px;
+    position:relative;/**/
+}
+
+header .logo img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+nav ul {
+    flex-grow:1;
+    list-style: none;
+    margin: 10px;
+    padding: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+nav ul li {
+    margin-left: 25px;
+}
+
+nav ul li a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    background: #00039e;
+    border-radius: 5px;
+}
+
+/* Mobile Styles */
+.menu-toggle {
+    display: none; /* Hide on large screens */
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.hero {
+    position: relative;
+    height: 100vh;
+    max-width: 95%;
+    margin: 0 auto;  /* Centers the section */
+    overflow: hidden;
+    background: linear-gradient(to right, #4b0000,#16072b, #4b0000);
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(48, 48, 48, 0.3); 
+    z-index: 1;
+}
+
+.hero h1, .hero p {
+    position: relative;
+    z-index: 2;
+}
+
+.slider {
+    position:relative;
+    overflow:hidden;
+    width: 100%;
+    height:100%;
+}
+
+.slides {
+    display: flex;
+    height:100%;
+    transition: transform 1s ease-in-out;
+    
+}
+
+.slide {
+    flex: 0 0 100%; /* Each slide takes up 100% of the width */
+   width:100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    opacity: 0; /* Initially set opacity to 0 */
+    transition: opacity 1s ease-in-out;
+}
+
+.active {
+    opacity: 1; /* Make the active slide visible */
+}
+.text-content {
+    text-align: center;
+    padding: 20px; /* Add some padding for better spacing */
+}
+.slide h1 {
+    font-size: 3rem;
+    margin: 0;
+    color:white;
+    z-index:11;
+    text-shadow: 2px 2px 4px rgba(178, 173, 173, 0.434);
+}
+
+.slide p {
+    font-size: 1.5rem;
+    text-shadow:rgba(0, 0, 0, 0.5);
+    margin-top: 10px;
+    color:white;
+    z-index:12;
+}
+
+button.prev,
+button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    z-index: 2;
+}
+
+button.prev {
+    left: 10px;
+}
+
+button.next {
+    right: 10px;
+}
+
+
+section {
+    padding: 50px 20px;
+    background-color: white;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+}
+
+.social-media a {
+    color: white;
+    margin: 0 10px;
+    font-size: 1.5rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form input, form textarea {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    padding: 10px;
+    background-color: #0073e6;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #005bb5;
+}
+/* Apply gradient background only to the gallery section */
+#gallery {
+    background: linear-gradient(to right, #16072b, #1a2a54, #16072b);
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 95%;
+    margin: 0 auto;  /* Centers the section */
+    color:white;
+}
+
+#gallery a:hover{
+    color: #019eff;
+}
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;  
+}
+
+.gallery-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 15px #ff00ff, 0 0 30px #00ffff;/* Style for images */
+    transition: transform 0.3s ease-in-out;
+}
+    /* Hover effect for images */
+.gallery-container img:hover {
+        transform: scale(1.1);
+    }
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block; /* Show hamburger icon */
+    }
+    nav {
+        display: none; /* Hide menu by default */
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: #090083;
+        width: 100%;
+        text-align: center;
+    }
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    nav.active {
+        display: block; /* Show when active */
+    }
+    .slide h1 {
+        font-size: 2rem;
+    }
+
+    .slide p {
+        font-size: 1rem;
+    }
+}
+#aboutnss {
+    position: relative;
+    background: linear-gradient(to right, #16072b, #1a2a54, #16072b);
+    background-size: cover; 
+    background-position: center;  
+    background-repeat: no-repeat; 
+    color: white;
+    padding: 20px; 
+    overflow: hidden;
+    height: 25vh; 
+    margin: 15px auto;
+}
+
+.text-container {
+    position: relative;
+    background: rgba(84, 80, 80, 0.174); 
+    backdrop-filter: blur(12px); 
+    padding: 5px; 
+    border-radius: 10px; 
+    z-index: 2;  
+    margin: 0 auto; 
+}
+.text-container a {
+    color:rgb(4, 104, 255); /* Default link color */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.text-container a:hover {
+    color: #3700b8; /* Change color on hover */
+    text-decoration: underline; /* Optional: underline on hover */
+}
+
+#aboutnss h1, #aboutnss p {
+    position: relative;
+    z-index: 3; 
+}
+
+#contact {
+    background: linear-gradient(to right, #4b0000,#16072b, #4b0000);
+    padding: auto;
+    max-width: 95%;
+    margin: 50px auto;
+    color: white;
+    border-radius: 10px;
+  }
+
+  .text-container a {
+    color:rgb(4, 104, 255); /* Default link color */
+    text-decoration: none;
+    font-weight: bold;
+}
+  .text-container a:hover {
+    color: #ffbf00; /* Change color on hover */
+    text-decoration: underline; /* Optional: underline on hover */
+}
+
+  .h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+.input, .textarea {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    width: 100%; /* Full width for input elements */
+    box-sizing: border-box;
+    resize: none;
+  }
+
+  .textarea {
+    resize: none; /* Prevents default resizing */
+    min-height: 150px; /* Fixed height */
+    overflow-y: auto; /* Enables vertical scrolling */
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .button {
+    background-color: #6a0000;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+
+  .button:hover {
+    background-color: #8b0000;
+  }
+
+  #officers {
+    background: linear-gradient(to right, #4b0000,#16072b, #4b0000);
+    padding: auto;
+    max-width: 95%;
+    margin: 50px auto;
+    color: white;
+    border-radius: 10px;
+  }
+
+  #officers a:hover{
+    color: #0040ff;
+}
+
+#camp {
+    background: linear-gradient(to right, #16072b, #1a2a54, #16072b);
+    padding: auto;
+    max-width: 95%;
+    margin: 50px auto;
+    border-radius: 10px;
+    color:white;
+    font-size:17px;
+}
+#camp a:hover{
+    color: #0040ff;
+}
+
+.social-media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px; /* Space between icons */
+    padding: 10px;
+}
+
+.social-media a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px; /* Ensures all icons have the same width */
+    height: 35px;
+    border-radius: 50%;
+    background-color: #f5f5f5; /* Light background for contrast */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.social-media a:hover {
+    transform: scale(1.1);
+}
+
+.social-media i {
+    font-size: 24px; /* Adjust Font Awesome icon size */
+    color: #333; /* Default icon color */
+}
+
+.social-media img {
+    width: 24px; /* Same size as FontAwesome icons */
+    height: 24px;
+    object-fit: contain; /* Ensures the image fits well */
+}
+
+#volunteer {
+    background: linear-gradient(to right, #16072b, #1a2a54, #16072b);
+    padding: auto;
+    border-radius: 10px;
+    max-width: 95%;
+    margin: 0 auto;  /* Centers the section */
+    color:white;
+}
+#volunteer a:hover{
+    color: #0040ff;
+}
+
+#events {
+    background: linear-gradient(to right, #4b0000,#16072b, #4b0000);
+    padding: auto;
+    max-width: 95%;
+    margin: 50px auto;
+    border-radius: 10px;
+    color:white;
+}
+#events a:hover{
+    color: #0040ff;
+}

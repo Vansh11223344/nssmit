@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="nsslogo.png">
+  <title>Attendence</title>
+  <style>
+    /* General Styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to right, #16072b, #1a2a54, #16072b);
+      color: white;
+    }
+
+    /* Header Section */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background-color: #002244;
+      color: white;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo img {
+      height: 50px;
+      margin-right: 10px;
+    }
+
+    .logo h1 {
+      margin: 0;
+      font-size: 1.8rem;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+      font-size: 1rem;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #ffeb3b;
+    }
+    .container {
+      padding: 20px;
+    }
+    .event {
+     
+      margin: 20px 0;
+      padding: 15px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .event h2 {
+      margin-top: 0;
+      color: #ffffff;
+    }
+    .event p {
+      color: #ffffff;
+    }
+    /* Table Section */
+    .table-container {
+      padding: 20px;
+      overflow-x: auto;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 0 auto;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    th, td {
+      padding: 12px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #34495e;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    th span {
+      margin-left: 5px;
+    }
+
+    /* Alternating Row Colors */
+    tbody tr:nth-child(odd) {
+      background-color: #d32f2f; /* Light Red */
+      color: white;
+    }
+    tbody tr:nth-child(even) {
+      background-color: #8b0000; /* Dark Red */
+      color: white;
+    }
+
+    tbody tr.senior:nth-child(odd) {
+      background-color: #a020f0; /* Light Purple */
+    }
+    tbody tr.senior:nth-child(even) {
+      background-color: #4b0082; /* Dark Purple */
+    }
+     /* Footer Styles */
+     footer {
+      text-align: center;
+      padding: 10px;
+      background-color: #002244;
+      border-top: 2px solid #ffffff;
+      margin-top: 20px;
+    }
+
+    footer p {
+      margin: 0;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="nsslogo.png" alt="NSS Logo"> <!-- Replace with actual NSS logo -->
+            <h1>Volunteer Hours</h1>
+          </div>
+        <!-- Navigation Links -->
+        <nav class="nav-links">
+          <a href="#" id="backToMain">Home</a>
+          <a href="#" id="about">About Us</a>
+          <a href="#" id="gallery">Gallery</a>
+          <a href="#" id="events">Events</a>
+         
+        </nav>
+      </header>
+      
+      <script>
+        document.getElementById("backToMain").addEventListener("click", function(event) {
+          event.preventDefault(); // Prevent default link behavior
+          window.location.href = "index.html"; // Redirect to main page
+        });
+        
+        document.getElementById("about").addEventListener("click", function(event) {
+          event.preventDefault(); // Prevent default link behavior
+          window.location.href = "AboutNss.html"; // Redirect to main page
+        });
+
+        document.getElementById("gallery").addEventListener("click", function(event) {
+          event.preventDefault(); // Prevent default link behavior
+          window.location.href = "GalleryNss.html"; // Redirect to main page
+        });
+
+        document.getElementById("events").addEventListener("click", function(event) {
+          event.preventDefault(); // Prevent default link behavior
+          window.location.href = "eventNss.html"; // Redirect to main page
+        });
+
+      </script>
+
+     <div class="event">
+      <h2>Attendence</h2>
+      <p>Within the NSS MAHE MIT Unit 1 and Unit 2, a dedicated group of passionate volunteers stands as the cornerstone of our vibrant community.
+        Guided by the wisdom of our Programme Officers and Unit Heads, these two units collectively form an unwavering force for good in society.
+         United by a shared commitment to service, each volunteer plays an essential role in bringing our initiatives to life. With diverse backgrounds 
+         and unique talents, they continuously demonstrate the power of selfless dedication, working together to create lasting positive change.
+          Their commitment, energy, and enthusiasm serve as an inspiration to all, showcasing the true spirit of the <b>National Service Scheme.</b></p>
+        </div>
+  <div class="table-container">
+    <table>
+      <thead>
+        <tr>
+          <th onclick="sortTable(0)">Name <span id="icon0">↕</span></th>
+          <th onclick="sortTable(1)">Number of Hours <span id="icon1">↕</span></th>
+          <th onclick="sortTable(2)">Rank <span id="icon2">↕</span></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="anchor"><td>Sanjana R Adiga</td><td>373</td><td>President(Unit-1)</td></tr>
+        <tr class="senior"><td>Santhosh Prabhu</td><td>267</td><td>Volunteer</td></tr>
+        <tr class="anchor"><td>Keerthan Kumar</td><td>253</td><td>Volunteer</td></tr>
+        <tr class="senior"><td>Debraj Ghosh</td><td>229</td><td>Volunteer</td></tr>
+        <tr class="anchor"><td>Pragyaa</td><td>228</td><td>Volunteer</td></tr>
+        <tr class="anchor"><td>Pragya Godara</td><td>201</td><td>Volunteer</td></tr>
+        <tr class="senior"><td>Pratham Sudheendra</td><td>198</td><td>Volunteer</td></tr>
+        <tr class="anchor"><td>Raghav Moorthy</td><td>194</td><td>Volunteer</td></tr>
+        <tr class="senior"><td>Aman Shekar</td><td>186</td><td>Volunteer</td></tr>
+        <tr class="anchor"><td>Omkar Shanbhag</td><td>183</td><td>Volunteer</td></tr>
+        <tr class="senior"><td>Mohit Jangir</td><td>182</td><td>Volunteer</td></tr>
+        <tr class="anchor"><td>Adityaraj Singha</td><td>182</td><td>Volunteer</td>
+        <tr class="senior"><td>Mahesh Soni</td><td>179</td><td>Volunteer</td></tr>
+        <tr class="anchor"><td>Aniket Hazra</td><td>181</td><td>Volunteer</td></tr>
+        <tr class="anchor"><td>Sharanya divinraj</td><td>177</td><td>Volunteer</td></tr>
+        <tr class="senior"><td>Vishal Vaibhav</td><td>154</td><td>Volunteer</td></tr>
+        <tr class="anchor"><td>Shivani Seshadri Iyer</td><td>125</td><td>Volunteer</td></tr>
+        <tr class="senior"><td>Yash Sinha</td><td>159</td><td>Volunteer</td></tr>
+        <tr class="anchor"><td>Spriha Pant</td><td>159</td><td>Volunteer</td></tr>
+        <tr class="anchor"><td>Shruti Priya</td><td>141</td><td>Volunteer</td></tr>
+        <tr class="senior"><td>Shravya</td><td>179</td><td>Volunteer</td></tr>
+        <tr class="anchor"><td>Samrat Sharma</td><td>120</td><td>Volunteer</td></tr>
+        <tr class="senior"><td>Sachi</td><td>102</td><td>Volunteer</td></tr>
+        <tr class="anchor"><td>Aman Gupta</td><td>90</td><td>Volunteer</td></tr>
+        <tr class="anchor"><td>Ashmit Mediratta</td><td>105</td><td>Volunteer</td></tr>
+        <tr class="senior"><td>Nishit Machhi</td><td>89</td><td>Volunteer</td></tr>
+        <tr class="anchor"><td>Krishnapriya k Binnoy</td><td>91</td><td>Volunteer</td></tr>
+        <tr class="senior"><td>Omkar Prabhu</td><td>106</td><td>Volunteer</td></tr>
+        <tr class="anchor"><td>Sarvagya</td><td>103</td><td>Volunteer</td></tr>
+        <tr class="anchor"><td>Shreya Talari</td><td>85</td><td>Volunteer</td></tr>
+        <tr class="senior"><td>Sanjana KM</td><td>79</td><td>Volunteer</td></tr>
+        <tr class="anchor"><td>Gaurav Gupta</td><td>91</td><td>Volunteer</td></tr>
+        <tr class="senior"><td>Tinu Kumar Saini</td><td>113</td><td>President(Unit-2)</td></tr>
+        <tr class="anchor"><td>Bhavesh Gupta</td><td>90</td><td>Volunteer</td></tr>
+        <tr class="anchor"><td>Daivik S Gokhale</td><td>86</td><td>Volunteer</td></tr>
+        <tr class="senior"><td>Prashast Saxena</td><td>96</td><td>Volunteer</td></tr>
+        <tr class="anchor"><td>Ishan Suhas Deshmukh</td><td>70</td><td>Volunteer</td></tr>
+        <tr class="senior"><td>Sanjana Virmani</td><td>99</td><td>Volunteer</td></tr>
+        <tr class="anchor"><td>J Anish Babu</td><td>87</td><td>Volunteer</td></tr>
+        <tr class="senior"><td>Prakhar Dwidevi</td><td>99</td><td>Volunteer</td></tr>
+        <tr class="anchor"><td>Soham Sadhukar</td><td>70</td><td>Volunteer</td></tr>
+      </tbody>
+    </table>
+  </div>
+  
+  <script>
+    let sortDirections = [true, true, true]; // Track sort direction for each column
+
+    function sortTable(columnIndex) {
+      const table = document.querySelector("table");
+      const tbody = table.querySelector("tbody");
+      const rows = Array.from(tbody.querySelectorAll("tr"));
+      
+      rows.sort((a, b) => {
+        const aValue = a.cells[columnIndex].textContent.trim();
+        const bValue = b.cells[columnIndex].textContent.trim();
+        
+        if (!isNaN(aValue) && !isNaN(bValue)) {
+          return sortDirections[columnIndex] ? aValue - bValue : bValue - aValue;
+        } else {
+          return sortDirections[columnIndex] 
+            ? aValue.localeCompare(bValue) 
+            : bValue.localeCompare(aValue);
+        }
+      });
+      
+      sortDirections[columnIndex] = !sortDirections[columnIndex];
+      tbody.innerHTML = "";
+      rows.forEach(row => tbody.appendChild(row));
+      
+      updateSortIcons(columnIndex);
+    }
+
+    function updateSortIcons(columnIndex) {
+      const icons = document.querySelectorAll("th span");
+      icons.forEach((icon, index) => {
+        if (index === columnIndex) {
+          icon.textContent = sortDirections[columnIndex] ? "↓" : "↑";
+        } else {
+          icon.textContent = "↕";
+        }
+      });
+    }
+  </script>
+
+  <footer>
+    <p>&copy; 2025 National Service Scheme. All rights reserved.</p>
+  </footer>
+</body>
+</html>

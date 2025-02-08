@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="nsslogo.png">
+  <title>NSS Gallery</title>
+  <style>
+    /* General Styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to right, #4b0000,#16072b, #4b0000); 
+      background-repeat: no-repeat;
+      color: #ffffff;
+    }
+
+    /* Header Section */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background-color: #002244;
+      color: white;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo img {
+      height: 50px;
+      margin-right: 10px;
+    }
+
+    .logo h1 {
+      margin: 0;
+      font-size: 1.8rem;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+      font-size: 1rem;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+      color: #ffeb3b;
+    }
+
+    /* Page Description */
+    .page-description {
+      text-align: center;
+      padding: 20px;
+      background-color: #081450;
+    }
+
+    .page-description p {
+      margin: 0;
+      font-size: 1.2rem;
+    }
+
+    /* Image Grid Section */
+    .image-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      padding: 20px;
+    }
+
+    .image-grid img {
+      width: 100%;
+      max-width: 300px;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .image-grid img:hover {
+      transform: scale(1.05);
+    }
+
+    /* Footer Section */
+    /* Footer Styles */
+    footer {
+      text-align: center;
+      padding: 10px;
+      background-color: #002244;
+      border-top: 2px solid #ffffff;
+      margin-top: 20px;
+    }
+
+    footer p {
+      margin: 0;
+      font-size: 14px;
+    }
+
+    /* Responsive Behavior */
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .logo h1 {
+        font-size: 1.5rem;
+      }
+
+      nav {
+        margin-top: 10px;
+      }
+
+      nav a {
+        display: block;
+        margin: 5px 0;
+      }
+
+      .image-grid {
+        gap: 10px;
+      }
+
+      .image-grid img {
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header Section with Logo and Navigation Links -->
+  <header>
+    <div class="logo">
+        <img src="nsslogo.png" alt="NSS Logo"> <!-- Replace with actual NSS logo -->
+        <h1>NSS Gallery</h1>
+      </div>
+    <!-- Navigation Links -->
+    <nav class="nav-links">
+      <a href="#" id="backToMain">Home</a>
+      <a href="#" id="about">About Us</a>
+      <a href="#" id="gallery">Gallery</a>
+      <a href="#" id="event">Events</a>
+     
+    </nav>
+  </header>
+  
+  <script>
+    document.getElementById("backToMain").addEventListener("click", function(event) {
+      event.preventDefault(); // Prevent default link behavior
+      window.location.href = "index.html"; // Redirect to main page
+    });
+    
+    document.getElementById("about").addEventListener("click", function(event) {
+      event.preventDefault(); // Prevent default link behavior
+      window.location.href = "AboutNss.html"; // Redirect to main page
+    });
+
+    document.getElementById("event").addEventListener("click", function(event) {
+      event.preventDefault(); // Prevent default link behavior
+      window.location.href = "eventNss.html"; // Redirect to main page
+    });
+
+//     document.getElementById("contact").addEventListener("click", function(event) {
+//   event.preventDefault(); // Prevent default link behavior
+//   window.location.href = "index.html#contact"; // Redirect to contact section on index.html
+// });
+ 
+  </script>
+
+  <!-- Page Description -->
+  <div class="page-description">
+    <p>A glimpse of activities conducted by the NSS showcasing participation, community events, and awareness campaigns.</p>
+  </div>
+
+  <!-- Image Grid Section -->
+  <div class="image-grid">
+    <img src="pic1.jpg" alt="Community Awareness Rally">
+    <img src="pic2.jpg" alt="Educational Seminar">
+    <img src="pic3.jpg" alt="Volunteer Activity">
+    <img src="pic4.jpg" alt="Social Drive">
+    <img src="pic5.jpg" alt="NSS Event">
+    <img src="pic6.jpg" alt="Awareness Campaign">
+    <img src="pic7.jpg" alt="Community Awareness Rally">
+    <img src="pic8.jpg" alt="Educational Seminar">
+    <img src="pic9.jpg" alt="Volunteer Activity">
+    <img src="pic10.jpg" alt="Social Drive">
+    <img src="pic11.jpg" alt="NSS Event">
+    <img src="pic12.jpg" alt="Awareness Campaign">
+    <img src="pic13.jpg" alt="Community Awareness Rally">
+    <img src="pic14.jpg" alt="Educational Seminar">
+    <img src="pic15.jpg" alt="Volunteer Activity">
+    <img src="pic16.jpg" alt="Social Drive">
+    <img src="pic17.jpg" alt="NSS Event">
+    <img src="pic18.jpg" alt="Awareness Campaign">
+    <img src="pic19.jpg" alt="Community Awareness Rally">
+    <img src="pic20.jpg" alt="Educational Seminar">
+    <img src="pic21.jpg" alt="Volunteer Activity">
+    <img src="pic22.jpg" alt="Social Drive">
+    
+  </div>
+
+  <!-- Footer Section -->
+  <footer>
+    <p>&copy; 2025 National Service Scheme. All rights reserved.</p>
+  </footer>
+</body>
+</html>
