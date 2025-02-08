@@ -29,7 +29,7 @@ header {
   }
   
   .logo img {
-    height: 40px; /* Restrict logo height */
+    height: 65px; /* Restrict logo height */
     width: auto;
     margin-right: 10px;
   }
@@ -119,7 +119,7 @@ nav ul li a:hover {
         display: block;
       }
       .logo {
-        font-size: 1.2rem; /* Reduce font size for smaller screens */
+        font-size: 1.8rem; /* Reduce font size for smaller screens */
       }
 }
 
@@ -309,22 +309,13 @@ form button:hover {
     max-width: 95%;
     padding: auto; 
     overflow: hidden;
-    height: 25vh; 
+    height: 30vh; 
     margin: 50px auto;
     border-radius: 10px;
 
 }
    
 
-.text-container {
-    position: relative;
-    background: rgba(84, 80, 80, 0.174); 
-    backdrop-filter: blur(12px); 
-    padding: 5px; 
-    border-radius: 10px; 
-    z-index: 2;  
-    margin: 0 auto; 
-}
 .text-container a {
     color:#9fbffa;
     text-decoration: none;
@@ -351,12 +342,12 @@ form button:hover {
   }
 
   .text-container a {
-    color:rgb(4, 104, 255); /* Default link color */
+    color:#9fbffa; /* Default link color */
     text-decoration: none;
     font-weight: bold;
 }
   .text-container a:hover {
-    color: #ffbf00; /* Change color on hover */
+    color: #3700b8; /* Change color on hover */
     text-decoration: underline; /* Optional: underline on hover */
 }
 
