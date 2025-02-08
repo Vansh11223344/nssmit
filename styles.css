@@ -52,7 +52,20 @@ nav ul li a:hover {
     background: #00039e;
     border-radius: 5px;
 }
-
+#navMenu {
+    display: none;
+    flex-direction: column;
+    background-color: #333;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 200px;
+    z-index: 10;
+  }
+  
+  #navMenu.show-menu {
+    display: flex;
+  }
 /* Mobile Styles */
 .menu-toggle {
     display: none; /* Hide on large screens */
@@ -62,6 +75,15 @@ nav ul li a:hover {
     font-size: 24px;
     cursor: pointer;
 }
+@media (max-width: 768px) {
+    .menu-toggle {
+      display: block;
+    }
+  
+    header nav ul {
+      display: none;
+    }
+  }
 
 .hero {
     position: relative;
@@ -447,4 +469,9 @@ form button:hover {
 }
 #events a:hover{
     color: #0040ff;
+}
+
+a {
+    color: #b2ffff; /* Link color */
+    text-decoration: none; /* Remove underline (optional) */
 }

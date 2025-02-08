@@ -49,4 +49,12 @@ document.querySelector('.prev').addEventListener('click', () => {
 showSlide(currentSlide);
 
 
+// Select the menu toggle button and navigation menu
+const menuToggle = document.getElementById("menuToggle");
+const navMenu = document.getElementById("navMenu");
+
+// Toggle the navigation menu when the button is clicked
+menuToggle.addEventListener("click", () => {
+  navMenu.classList.toggle("show-menu");
+});
 
