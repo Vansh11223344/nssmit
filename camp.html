@@ -4,16 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="nsslogo.png">
-    <title>NSS Camp</title>
+   <!-- <title>NSS Camp</title> -->
     <style>
-       body {
+       html,body {
+      height:100%;
       font-family: Arial, sans-serif;
       margin: 0;
-      padding: 0;
-      background: linear-gradient(to right, #16072b, #1a2a54, #16072b);
-      color: white;
+      
+      display: flex;
+      flex-direction: column;
     }
 
+    body {
+            background: linear-gradient(to right, #16072b, #1a2a54, #16072b);
+            color: white;
+        }
+    .content {
+            flex: 1; /* This allows the content to grow and take up available space */
+            padding: 20px;
+        }
     /* Header Section */
     header {
       display: flex;
@@ -55,12 +64,20 @@
       padding: 20px;
     }
     #camp {
-    color: rgb(0, 157, 255);
+    color: #9fbffa;
     text-decoration: line; 
   }
     #camp a:hover{
         color:#ffeb3b;
     }
+    main {
+            margin-bottom: 20px;
+        }
+
+        
+        h1 {
+            color: #ffffff;
+        }
         header nav ul {
             list-style: none;
             margin: 0;
@@ -77,17 +94,9 @@
             text-decoration: none;
             font-weight: bold;
         }
-        main {
-            padding: 20px;
-            margin-bottom: 60px; /* To prevent footer from overlapping content */
-        }
-
+  
         section {
             margin-bottom: 40px;
-        }
-
-        h1 {
-            color: #ffffff;
         }
 
    /* Footer Styles */
@@ -95,10 +104,9 @@
       background-color: #333;
       color: white;
       text-align: center;
-      padding: 8px 0;
-      position:absolute;
-      bottom: 0;
-      width: 100%;
+      padding: 18px 0;
+      width: auto;
+      
     }
     </style>
 </head>
@@ -106,7 +114,7 @@
         <header>
             <div class="logo">
                 <img src="nsslogo.png" alt="NSS Logo"> <!-- Replace with actual NSS logo -->
-                <h1>NSS Camp</h1>
+                
               </div>
             <!-- Navigation Links -->
             <nav class="nav-links">
@@ -141,7 +149,8 @@
     
           </script>
     
-    <main>
+    
+    <main class="content">
         <!-- About Section -->
         <section id="about">
             <h1>About NSS Camps</h1>
@@ -162,8 +171,6 @@
         </section>
 
     <!-- Footer -->
-    <footer>
-        <p>&copy; 2025 My Webpage. All rights reserved.</p>
-    </footer>
+   
 </body>
 </html>

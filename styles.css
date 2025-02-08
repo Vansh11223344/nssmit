@@ -11,7 +11,7 @@ header {
     display: flex;
     justify-content:center;
     justify-content:space-between;
-    padding: 20px;
+    padding:  20px;
     background-color: #002244;
     color: white;
     top: 0;
@@ -25,7 +25,7 @@ header .logo img {
     height: 100px;
     border-radius: 50%;
 }
-
+/*
 #navMenu {
     display: none;
     flex-direction: column;
@@ -35,7 +35,7 @@ header .logo img {
     right: 0;
     width: 100px;
     z-index: 10;
-  }
+  }*/
   nav ul {
     flex-grow:1;
     list-style: none;
@@ -61,36 +61,53 @@ nav ul li a {
 nav ul li a:hover {
     background: #00039e;
     border-radius: 5px;
-}
+} /*
   #navMenu.show-menu {
     display: flex;
   }
   header {
     position: relative;
-}
+}*/
 /* Mobile Styles */
 .menu-toggle {
-    display: block; /* Hide on large screens */
+    display: none; /* Hide on large screens */
     background: none;
     border: none;
     color: white;
     font-size: 24px;
     cursor: pointer;
 }
+
+
 @media (max-width: 768px) {
-    #navMenu {
-        display: flex;
-        position: static;
-        flex-direction: row;
+    #nav {
+        display: none; /* Hide nav by default on small screens */
+        position: absolute;
+        top: 60px; /* Adjust based on header height */
+        left: 0;
+        right: 0;
+        background-color: #333; /* Same as header */
+        z-index: 1000; /* Ensure it appears above other content */
     }
-    .menu-toggle {
-      display: none;
+
+    nav.active {
+        display: block; /* Show nav when active */
     }
-  
-    header nav ul {
-      display: none;
+
+    nav ul {
+        display: block; /* Stack items vertically */
     }
-  }
+
+    nav ul li {
+        display: block; /* Each item takes full width */
+        margin: 10px 0; /* Space between items */
+    }
+
+    nav ul li a {
+        padding: 10px; /* Add padding for clickable area */
+        display: block; /* Make the entire area clickable */
+    }
+}
 
 .hero {
     position: relative;
@@ -279,13 +296,13 @@ form button:hover {
         background: #090083;
         width: 100%;
         text-align: center;
-    }*/
+    }
     nav ul {
         flex-direction: column;
         align-items: center;
     }
     nav.active {
-        display: block; /* Show when active */
+        display: block; 
     }
     .slide h1 {
         font-size: 2rem;
@@ -294,6 +311,7 @@ form button:hover {
     .slide p {
         font-size: 1rem;
     }
+}*/
 
 #aboutnss {
     position: relative;
@@ -322,7 +340,7 @@ form button:hover {
     margin: 0 auto; 
 }
 .text-container a {
-    color:rgb(4, 104, 255); /* Default link color */
+    color:#9fbffa;
     text-decoration: none;
     font-weight: bold;
 }

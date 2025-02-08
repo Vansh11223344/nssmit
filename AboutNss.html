@@ -86,7 +86,7 @@
       <a href="#" id="backToMain">Home</a>
       <a href="#about">About Us</a>
       <a href="#" id="gallery">Gallery</a>
-      <a href="#activities">Events</a>
+      <a href="#" id="event">Events</a>
       
     </nav>
   </header>
@@ -100,6 +100,11 @@
     document.getElementById("gallery").addEventListener("click", function(event) {
       event.preventDefault(); // Prevent default link behavior
       window.location.href = "GalleryNss.html"; // Redirect to main page
+    });
+
+    document.getElementById("event").addEventListener("click", function(event) {
+      event.preventDefault(); // Prevent default link behavior
+      window.location.href = "eventNss.html"; // Redirect to main page
     });
   </script>
   

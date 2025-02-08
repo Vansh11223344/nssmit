@@ -48,19 +48,16 @@ document.querySelector('.prev').addEventListener('click', () => {
 // Initial slide setup
 showSlide(currentSlide);
 
-
-// Select the menu toggle button and navigation menu
-const menuToggle = document.getElementById("menuToggle");
-const navMenu = document.getElementById("navMenu");
-
-// Toggle the navigation menu when the button is clicked
-menuToggle.addEventListener("click", () => {
-  navMenu.classList.toggle("show-menu");
+   // Toggle the menu when the button is clicked
+   document.getElementById('menuToggle').addEventListener('click', function() {
+    const navMenu = document.getElementById('navMenu');
+    navMenu.classList.toggle('active'); // Toggle the 'active' class
 });
 
 // Close the menu when a link is clicked (optional enhancement)
+const navMenu = document.getElementById('navMenu');
 navMenu.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', () => {
-      navMenu.classList.remove('show-menu');
+        navMenu.classList.remove('active'); // Close the menu when a link is clicked
     });
-  });
+});
