@@ -58,3 +58,9 @@ menuToggle.addEventListener("click", () => {
   navMenu.classList.toggle("show-menu");
 });
 
+// Close the menu when a link is clicked (optional enhancement)
+navMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      navMenu.classList.remove('show-menu');
+    });
+  });

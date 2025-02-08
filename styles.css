@@ -26,7 +26,17 @@ header .logo img {
     border-radius: 50%;
 }
 
-nav ul {
+#navMenu {
+    display: none;
+    flex-direction: column;
+    background-color: #333;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100px;
+    z-index: 10;
+  }
+  nav ul {
     flex-grow:1;
     list-style: none;
     margin: 10px;
@@ -52,23 +62,15 @@ nav ul li a:hover {
     background: #00039e;
     border-radius: 5px;
 }
-#navMenu {
-    display: none;
-    flex-direction: column;
-    background-color: #333;
-    position: absolute;
-    top: 60px;
-    right: 0;
-    width: 200px;
-    z-index: 10;
-  }
-  
   #navMenu.show-menu {
     display: flex;
   }
+  header {
+    position: relative;
+}
 /* Mobile Styles */
 .menu-toggle {
-    display: none; /* Hide on large screens */
+    display: block; /* Hide on large screens */
     background: none;
     border: none;
     color: white;
@@ -76,8 +78,13 @@ nav ul li a:hover {
     cursor: pointer;
 }
 @media (max-width: 768px) {
+    #navMenu {
+        display: flex;
+        position: static;
+        flex-direction: row;
+    }
     .menu-toggle {
-      display: block;
+      display: none;
     }
   
     header nav ul {
@@ -259,20 +266,20 @@ form button:hover {
 .gallery-container img:hover {
         transform: scale(1.1);
     }
-
+/*
 @media (max-width: 768px) {
     .menu-toggle {
-        display: block; /* Show hamburger icon */
+        display: block; 
     }
     nav {
-        display: none; /* Hide menu by default */
+        display: none; 
         position: absolute;
         top: 60px;
         right: 0;
         background: #090083;
         width: 100%;
         text-align: center;
-    }
+    }*/
     nav ul {
         flex-direction: column;
         align-items: center;
@@ -295,11 +302,15 @@ form button:hover {
     background-position: center;  
     background-repeat: no-repeat; 
     color: white;
-    padding: 20px; 
+    max-width: 95%;
+    padding: auto; 
     overflow: hidden;
     height: 25vh; 
-    margin: 15px auto;
+    margin: 50px auto;
+    border-radius: 10px;
+
 }
+   
 
 .text-container {
     position: relative;
@@ -472,6 +483,6 @@ form button:hover {
 }
 
 a {
-    color: #b2ffff; /* Link color */
+    color: #9fbffa; /* Link color */
     text-decoration: none; /* Remove underline (optional) */
 }
