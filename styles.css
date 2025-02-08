@@ -1,7 +1,10 @@
-body {
-    font-family: Arial, sans-serif;
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: Arial, sans-serif;
     background: linear-gradient(to bottom, #005582, #5a0d4e);
      /*background-attachment: fixed; Keeps the background stable on scroll */
     color: #333;
@@ -9,22 +12,28 @@ body {
 
 header {
     display: flex;
-    justify-content:center;
+    align-items:center;
     justify-content:space-between;
-    padding:  20px;
+    padding: 40px 20px;
     background-color: #002244;
     color: white;
-    top: 0;
     z-index: 1000;
     font-size:20px;
     position:relative;/**/
 }
 
-header .logo img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-}
+.logo {
+    font-size: 1.9rem;
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo img {
+    height: 40px; /* Restrict logo height */
+    width: auto;
+    margin-right: 10px;
+  }
+  
 /*
 #navMenu {
     display: none;
@@ -36,38 +45,32 @@ header .logo img {
     width: 100px;
     z-index: 10;
   }*/
-  nav ul {
-    flex-grow:1;
-    list-style: none;
-    margin: 10px;
-    padding: 30px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-}
+     /* Navigation */
+     nav {
+        display: flex;
+      }
+      nav ul {
+        list-style: none;
+        display: flex;
+      }
 
 nav ul li {
-    margin-left: 25px;
+    margin-left:0 15px;
 }
 
 nav ul li a {
     color: rgb(255, 255, 255);
     text-decoration: none;
     font-weight: bold;
-    padding: 10px 15px;
-    transition: 0.3s;
+    padding: 40px 40px;
+    
 }
 
 nav ul li a:hover {
     background: #00039e;
-    border-radius: 5px;
-} /*
-  #navMenu.show-menu {
-    display: flex;
-  }
-  header {
-    position: relative;
-}*/
+    border-radius: 4px;
+} 
+
 /* Mobile Styles */
 .menu-toggle {
     display: none; /* Hide on large screens */
@@ -80,33 +83,44 @@ nav ul li a:hover {
 
 
 @media (max-width: 768px) {
-    #nav {
-        display: none; /* Hide nav by default on small screens */
+    nav {
+        display: none;/* Hide nav by default on small screens */
+        flex-direction: column;
+        width: 50%;
         position: absolute;
-        top: 60px; /* Adjust based on header height */
-        left: 0;
         right: 0;
+        top: 75px;
         background-color: #333; /* Same as header */
         z-index: 1000; /* Ensure it appears above other content */
     }
 
     nav.active {
-        display: block; /* Show nav when active */
+        display:flex; /* Show nav when active */
     }
 
     nav ul {
-        display: block; /* Stack items vertically */
-    }
+        flex-direction: column;
+        width: 100%;
+      }
 
-    nav ul li {
-        display: block; /* Each item takes full width */
-        margin: 10px 0; /* Space between items */
-    }
+      nav ul li {
+        width: 100%;
+      }
 
-    nav ul li a {
-        padding: 10px; /* Add padding for clickable area */
-        display: block; /* Make the entire area clickable */
-    }
+    
+      nav ul li a {
+        display: block;
+        width: 100%;
+        text-align: left;
+        padding: 10px;
+        border-bottom: 1px solid #444;
+      }
+      .menu-toggle {
+        display: block;
+      }
+      .logo {
+        font-size: 1.2rem; /* Reduce font size for smaller screens */
+      }
 }
 
 .hero {
@@ -283,35 +297,7 @@ form button:hover {
 .gallery-container img:hover {
         transform: scale(1.1);
     }
-/*
-@media (max-width: 768px) {
-    .menu-toggle {
-        display: block; 
-    }
-    nav {
-        display: none; 
-        position: absolute;
-        top: 60px;
-        right: 0;
-        background: #090083;
-        width: 100%;
-        text-align: center;
-    }
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
-    nav.active {
-        display: block; 
-    }
-    .slide h1 {
-        font-size: 2rem;
-    }
 
-    .slide p {
-        font-size: 1rem;
-    }
-}*/
 
 #aboutnss {
     position: relative;

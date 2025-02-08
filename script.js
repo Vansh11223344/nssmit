@@ -49,15 +49,15 @@ document.querySelector('.prev').addEventListener('click', () => {
 showSlide(currentSlide);
 
    // Toggle the menu when the button is clicked
-   document.getElementById('menuToggle').addEventListener('click', function() {
-    const navMenu = document.getElementById('navMenu');
-    navMenu.classList.toggle('active'); // Toggle the 'active' class
-});
+   document.getElementById("menuToggle").addEventListener("click", function () {
+    const nav = document.getElementById("nav");
+    nav.classList.toggle("active");
+  });
 
 // Close the menu when a link is clicked (optional enhancement)
-const navMenu = document.getElementById('navMenu');
-navMenu.querySelectorAll('a').forEach(link => {
+const nav = document.getElementById('menuToggle');
+nav.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', () => {
-        navMenu.classList.remove('active'); // Close the menu when a link is clicked
+        nav.classList.remove('active'); // Close the menu when a link is clicked
     });
 });
