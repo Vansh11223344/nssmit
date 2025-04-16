@@ -481,3 +481,17 @@ a {
     color: #9fbffa; /* Link color */
     text-decoration: none; /* Remove underline (optional) */
 }
+
+
+#upcomingevents {
+    background: linear-gradient(to right, #4b0000,#16072b, #4b0000);
+    padding: auto;
+    max-width: 95%;
+    margin: 50px auto;
+    color: white;
+    border-radius: 10px;
+  }
+
+  #upcomingevents a:hover{
+    color: #0040ff;
+}
