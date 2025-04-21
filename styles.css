@@ -86,11 +86,11 @@ nav ul li a:hover {
     nav {
         display: none;/* Hide nav by default on small screens */
         flex-direction: column;
-        width: 50%;
+        width: 40%;
         position: absolute;
         right: 0;
         top: 75px;
-        background-color: #333; /* Same as header */
+        background-color: #333; 
         z-index: 1000; /* Ensure it appears above other content */
     }
 
@@ -494,4 +494,37 @@ a {
 
   #upcomingevents a:hover{
     color: #0040ff;
+}
+
+
+
+.slogan {
+    display: none;
+    font-size: 1.7rem;
+    font-weight: bold;
+    background: linear-gradient(to right, #FF9933, #ffffff, #138808); 
+    -webkit-background-clip: text;
+    color: transparent;
+  /*  color: white;*/
+    margin-left: 10px;
+}
+
+@media (max-width: 768px) {
+    .slogan {
+        display: block;
+    }
+
+    header {
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .logo {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .menu-toggle {
+        margin-left: auto;
+    }
 }

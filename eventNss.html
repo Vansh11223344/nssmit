@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/png" href="nsslogo.png">
+  <link rel="icon" type="image/png" href="images/nsslogo.png">
   <title>NSS Events</title>
   <style>
     body {
@@ -62,34 +62,32 @@
   </style>
 </head>
 <body>
-    <header>
-        <img src="nsslogo.png" alt="NSS Logo">
-        <nav>
-          <a href="index.html" id="home-link">Home</a>
-          <a href="AboutNss.html" id="about-link">About Us</a>
-          <a href="AboutNss.html" id="Gallery-link">Gallery</a>
-          <a href="#event">Events</a>
-          
-        </nav>
-      </header>
-      <script>
-        // Event listener to handle 'Home' link click
-        document.getElementById('home-link').addEventListener('click', function(event) {
-          event.preventDefault(); // Prevents the default anchor link behavior
-          window.location.href = 'index.html'; // Redirects to index.html
-        });
-      
-        // Event listener to handle 'About' link click
-        document.getElementById('about-link').addEventListener('click', function(event) {
-          event.preventDefault(); // Prevents the default anchor link behavior
-          window.location.href = 'AboutNss.html'; // Redirects to AboutNss.html
-        });
-    
-        document.getElementById('Gallery-link').addEventListener('click', function(event) {
-          event.preventDefault(); // Prevents the default anchor link behavior
-          window.location.href = 'GalleryNss.html'; // Redirects to AboutNss.html
-        });
-      </script>
+  <header>
+    <img src="images/nsslogo.png" alt="NSS Logo">
+    <nav>
+      <a href="index.html" id="home-link">Home</a>
+      <a href="AboutNss.html" id="about-link">About Us</a>
+      <a href="AboutNss.html" id="Gallery-link">Gallery</a>
+      <a href="#event">Events</a>
+    </nav>
+  </header>
+
+  <script>
+    document.getElementById('home-link').addEventListener('click', function(event) {
+      event.preventDefault();
+      window.location.href = 'index.html';
+    });
+
+    document.getElementById('about-link').addEventListener('click', function(event) {
+      event.preventDefault();
+      window.location.href = 'AboutNss.html';
+    });
+
+    document.getElementById('Gallery-link').addEventListener('click', function(event) {
+      event.preventDefault();
+      window.location.href = 'GalleryNss.html';
+    });
+  </script>
 
   <div class="container">
     <h1>NSS Events</h1>
@@ -142,7 +140,7 @@
          From defensive moves to situational awareness strategies, the sessions were designed to equip both girls and boys with essential self-defence skills
           that can be applied in real-life situations.</p>
 
-       <P> Through hands-on training and confidence-building exercises, the workshops empowered girls to feel more secure and self-assured in their daily lives.
+       <p>Through hands-on training and confidence-building exercises, the workshops empowered girls to feel more secure and self-assured in their daily lives.
          The NSS unit's initiative not only promoted physical preparedness but also fostered mental strength and courage.</p>
          <p><b>"Confidence is your best defence."</b></p>
     </div>
@@ -204,7 +202,6 @@
   </footer>
 
   <script>
-    // JavaScript for any dynamic functionality (if needed)
     console.log("NSS Events Page Loaded");
   </script>
 </body>

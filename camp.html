@@ -3,14 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="nsslogo.png">
-   <!-- <title>NSS Camp</title> -->
+    <link rel="icon" type="image/png" href="images/nsslogo.png">
+    <!-- <title>NSS Camp</title> -->
     <style>
        html,body {
       height:100%;
       font-family: Arial, sans-serif;
       margin: 0;
-      
       display: flex;
       flex-direction: column;
     }
@@ -20,9 +19,10 @@
             color: white;
         }
     .content {
-            flex: 1; /* This allows the content to grow and take up available space */
+            flex: 1;
             padding: 20px;
         }
+
     /* Header Section */
     header {
       display: flex;
@@ -63,93 +63,91 @@
     .container {
       padding: 20px;
     }
+
     #camp {
-    color: #9fbffa;
-    text-decoration: line; 
-  }
-    #camp a:hover{
-        color:#ffeb3b;
+      color: #9fbffa;
+      text-decoration: line; 
     }
+
+    #camp a:hover {
+      color:#ffeb3b;
+    }
+
     main {
-            margin-bottom: 20px;
-        }
+      margin-bottom: 20px;
+    }
 
-        
-        h1 {
-            color: #ffffff;
-        }
-        header nav ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-        }
+    h1 {
+      color: #ffffff;
+    }
 
-        header nav ul li {
-            margin-left: 20px;
-        }
+    header nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
 
-        header nav ul li a {
-            color: #fff;
-            text-decoration: none;
-            font-weight: bold;
-        }
-  
-        section {
-            margin-bottom: 40px;
-        }
+    header nav ul li {
+      margin-left: 20px;
+    }
 
-   /* Footer Styles */
-   footer {
+    header nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    section {
+      margin-bottom: 40px;
+    }
+
+    /* Footer Styles */
+    footer {
       background-color: #333;
       color: white;
       text-align: center;
       padding: 18px 0;
       width: auto;
-      
     }
     </style>
 </head>
-    <body>
-        <header>
-            <div class="logo">
-                <img src="nsslogo.png" alt="NSS Logo"> <!-- Replace with actual NSS logo -->
-                
-              </div>
-            <!-- Navigation Links -->
-            <nav class="nav-links">
-              <a href="#" id="backToMain">Home</a>
-              <a href="#" id="about">About Us</a>
-              <a href="#" id="gallery">Gallery</a>
-              <a href="#" id="events">Events</a>
-              
-            </nav>
-          </header>
-          
-          <script>
-            document.getElementById("backToMain").addEventListener("click", function(event) {
-              event.preventDefault(); // Prevent default link behavior
-              window.location.href = "index.html"; // Redirect to main page
-            });
-            
-            document.getElementById("about").addEventListener("click", function(event) {
-              event.preventDefault(); // Prevent default link behavior
-              window.location.href = "AboutNss.html"; // Redirect to main page
-            });
-    
-            document.getElementById("gallery").addEventListener("click", function(event) {
-              event.preventDefault(); // Prevent default link behavior
-              window.location.href = "GalleryNss.html"; // Redirect to main page
-            });
-    
-            document.getElementById("events").addEventListener("click", function(event) {
-              event.preventDefault(); // Prevent default link behavior
-              window.location.href = "eventNss.html"; // Redirect to main page
-            });
-    
-          </script>
-    
-    
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/nsslogo.png" alt="NSS Logo"> <!-- Updated path -->
+        </div>
+        <!-- Navigation Links -->
+        <nav class="nav-links">
+            <a href="#" id="backToMain">Home</a>
+            <a href="#" id="about">About Us</a>
+            <a href="#" id="gallery">Gallery</a>
+            <a href="#" id="events">Events</a>
+        </nav>
+    </header>
+
+    <script>
+        document.getElementById("backToMain").addEventListener("click", function(event) {
+            event.preventDefault();
+            window.location.href = "index.html";
+        });
+
+        document.getElementById("about").addEventListener("click", function(event) {
+            event.preventDefault();
+            window.location.href = "AboutNss.html";
+        });
+
+        document.getElementById("gallery").addEventListener("click", function(event) {
+            event.preventDefault();
+            window.location.href = "GalleryNss.html";
+        });
+
+        document.getElementById("events").addEventListener("click", function(event) {
+            event.preventDefault();
+            window.location.href = "eventNss.html";
+        });
+    </script>
+
     <main class="content">
         <!-- About Section -->
         <section id="about">
@@ -162,15 +160,14 @@
                 also foster lasting friendships and memories. Through these experiences, NSS MAHE MIT continues to cultivate well-rounded
                 individuals who are equipped to contribute positively to society.</p>
         </section>
-        <section id="camp">
-            <p><a href="hoursNss.html" target="_blank"><b>Summer Camp(2024) report...</b></a></p>
-            <div id="volunteerHours" class="volunteer-container"></div>
 
-            <p><a href="December2024.docx" target="_blank"><b>Winter  Camp(2024) report...</b></a></p>
+        <section id="camp">
+            <!-- <p><a href="hoursNss.html" target="_blank"><b>Summer Camp(2024) report...</b></a></p>
+            <div id="volunteerHours" class="volunteer-container"></div> -->
+
+            <p><a href="December2024.docx" target="_blank"><b>Winter Camp(2024) report...</b></a></p>
             <div id="volunteerHours" class="volunteer-container"></div>
         </section>
-
-    <!-- Footer -->
-   
+    </main>
 </body>
 </html>

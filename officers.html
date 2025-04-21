@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/png" href="nsslogo.png">
+  <link rel="icon" type="image/png" href="images/nsslogo.png">
   <title>NSS Program Officers</title>
   <style>
     body {
@@ -13,7 +13,6 @@
       color: white;
     }
 
-    /* Header styling */
     header {
       display: flex;
       justify-content: space-between;
@@ -38,7 +37,6 @@
       text-decoration: underline;
     }
 
-    /* Main content styling */
     .container {
       display: flex;
       flex-direction: column;
@@ -73,104 +71,96 @@
     }
 
     .email-link {
-  color: rgb(0, 128, 255); /* Default color */
-  text-decoration: none; /* Optional: remove underline */
-}
+      color: rgb(0, 128, 255);
+      text-decoration: none;
+    }
 
-.email-link:hover {
-  color: orange; /* Color on hover */
-}
+    .email-link:hover {
+      color: orange;
+    }
 
-    /* Footer styling */
     footer {
       text-align: center;
       padding: 10px;
       background-color: #002244;
       color: white;
-      position:static;
+      position: static;
       bottom: 0;
       width: 100%;
     }
   </style>
 </head>
 <body>
-  <!-- Header Section -->
   <header>
-    <img src="nsslogo.png" alt="NSS Logo">
+    <img src="images/nsslogo.png" alt="NSS Logo">
     <nav>
       <a href="index.html" id="home-link">Home</a>
       <a href="AboutNss.html" id="about-link">About Us</a>
-      <a href="AboutNss.html" id="Gallery-link">Gallery</a>
+      <a href="GalleryNss.html" id="Gallery-link">Gallery</a>
       <a href="eventNss.html" id="events-link">Events</a>
-     
     </nav>
   </header>
+
   <script>
-    // Event listener to handle 'Home' link click
     document.getElementById('home-link').addEventListener('click', function(event) {
-      event.preventDefault(); // Prevents the default anchor link behavior
-      window.location.href = 'index.html'; // Redirects to index.html
+      event.preventDefault();
+      window.location.href = 'index.html';
     });
-  
-    // Event listener to handle 'About' link click
+
     document.getElementById('about-link').addEventListener('click', function(event) {
-      event.preventDefault(); // Prevents the default anchor link behavior
-      window.location.href = 'AboutNss.html'; // Redirects to AboutNss.html
+      event.preventDefault();
+      window.location.href = 'AboutNss.html';
     });
 
     document.getElementById('Gallery-link').addEventListener('click', function(event) {
-      event.preventDefault(); // Prevents the default anchor link behavior
-      window.location.href = 'GalleryNss.html'; // Redirects to AboutNss.html
+      event.preventDefault();
+      window.location.href = 'GalleryNss.html';
     });
 
     document.getElementById('events-link').addEventListener('click', function(event) {
-      event.preventDefault(); // Prevents the default anchor link behavior
-      window.location.href = 'eventNss.html'; // Redirects to AboutNss.html
+      event.preventDefault();
+      window.location.href = 'eventNss.html';
     });
   </script>
 
-  <!-- Main Content Section -->
   <div class="container">
     <div class="profile">
-      <img src="MadodiSir.png" alt="Officer 1">
+      <img src="images/MadodiSir.png" alt="Officer 1">
       <h2>Balakrishna S Maddodi</h2>
       <p>Designation: Program Officer</p>
-      <p>Email:<a href="mailto:bs.maddodi@manipal.edu" class="email-link">bs.maddodi@manipal.edu</a></p>
+      <p>Email: <a href="mailto:bs.maddodi@manipal.edu" class="email-link">bs.maddodi@manipal.edu</a></p>
     </div>
     <div class="profile">
-      <img src="PoornimaMam.png" alt="Officer 2">
+      <img src="images/PoornimaMam.png" alt="Officer 2">
       <h2>Poornima Bhagavath</h2>
       <p>Designation: Program Officer</p>
-      <p>Email:<a href="mailto:poornima.nayak@manipal.edu" class="email-link">poornima.nayak@manipal.edu</a></p>
+      <p>Email: <a href="mailto:poornima.nayak@manipal.edu" class="email-link">poornima.nayak@manipal.edu</a></p>
     </div>
     <div class="profile">
-      <img src="LaxmanSir.png" alt="Officer 3">
+      <img src="images/LaxmanSir.png" alt="Officer 3">
       <h2>Lakshman Rao S. Paragond</h2>
       <p>Designation: Program Officer</p>
-      <p>Email:<a href="mailto:laxman.sp@manipal.edu" class="email-link">laxman.sp@manipal.edu</a></p>
+      <p>Email: <a href="mailto:laxman.sp@manipal.edu" class="email-link">laxman.sp@manipal.edu</a></p>
     </div>
     <div class="profile">
-      <img src="MahaShwetaMam.png" alt="Officer 4">
+      <img src="images/MahaShwetaMam.png" alt="Officer 4">
       <h2>Mahasweta Laskar</h2>
       <p>Designation: Assistant Program Officer</p>
-      <p>Email:<a href="mailto:mahasweta.laskar@manipal.edu" class="email-link">mahasweta.laskar@manipal.edu</a></p>
+      <p>Email: <a href="mailto:mahasweta.laskar@manipal.edu" class="email-link">mahasweta.laskar@manipal.edu</a></p>
     </div>
     <div class="profile">
-      <img src="HarshiniMam.png" alt="Officer 5">
+      <img src="images/HarshiniMam.png" alt="Officer 5">
       <h2>Harshini Dasari</h2>
       <p>Designation: Assistant Program Officer</p>
-      <p>Email:<a href="mailto:harshini.dasari@manipal.edu" class="email-link">harshini.dasari@manipal.edu</a></p>
+      <p>Email: <a href="mailto:harshini.dasari@manipal.edu" class="email-link">harshini.dasari@manipal.edu</a></p>
     </div>
   </div>
 
-  <!-- Footer Section -->
   <footer>
     <p>&copy; 2025 NSS. All rights reserved.</p>
   </footer>
 
   <script>
-    // JavaScript for any additional functionality
-    // Example: Highlight the current link
     const currentPage = window.location.href;
     const links = document.querySelectorAll('header nav a');
     links.forEach(link => {
